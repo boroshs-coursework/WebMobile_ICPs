@@ -4,4 +4,4 @@ Summary - In this ICP, we installed WebStorm and learned how to use Git and GitH
 
 Wiki link - https://github.com/boroshs/WebMobile_ICPs/wiki/Web_ICP1
 
-Video link -
+Video link - https://youtu.be/284eM7qUa-M
