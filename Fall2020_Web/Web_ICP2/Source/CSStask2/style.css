@@ -1,0 +1,69 @@
+.cube {
+  /* cube using CSS grid with 3 columns*/
+  display: grid;
+  grid-template-columns: auto auto auto;
+  
+  /* color and size of cube*/
+  background-color: white;
+  height: 220px;
+  width: 220px;
+  
+  /* centering cube*/
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  
+  /* centering color grids in cube*/
+  justify-items: center;
+  align-items: center;
+}
+
+/* colors and sizes for color grids*/
+.color-grid1 {
+  background-color: pink;
+  height: 70px;
+  width: 70px;
+}
+.color-grid2 {
+  background-color: purple;
+  height: 70px;
+  width: 70px;
+}
+.color-grid3 {
+  background-color: brown;
+  height: 70px;
+  width: 70px;
+}
+.color-grid4 {
+  background-color: red;
+  height: 70px;
+  width: 70px;
+}
+.color-grid5 {
+  background-color: green;
+  height: 70px;
+  width: 70px;
+}
+.color-grid6 {
+  background-color: yellow;
+  height: 70px;
+  width: 70px;
+}
+.color-grid7 {
+  background-color: orange;
+  height: 70px;
+  width: 70px;
+}
+.color-grid8 {
+  background-color: blue;
+  height: 70px;
+  width: 70px;
+}
+.color-grid9 {
+  background-color: black;
+  height: 70px;
+  width: 70px;
+}
