@@ -4,4 +4,4 @@ Summary - In this ICP, we learn how to use different HTML tags and style them us
 
 Wiki link - https://github.com/boroshs/WebMobile_ICPs/wiki/Web_ICP2
 
-Video link - https://youtu.be/
+Video link - https://youtu.be/wy8WmhxVRac
