@@ -4,4 +4,4 @@ Summary - In this ICP, we learn how to use Bootstrap to make responsive web page
 
 Wiki link - https://github.com/boroshs/WebMobile_ICPs/wiki/Web_ICP3
 
-Video link - https://youtu.be/
+Video link - https://youtu.be/-aishMeq4lY
