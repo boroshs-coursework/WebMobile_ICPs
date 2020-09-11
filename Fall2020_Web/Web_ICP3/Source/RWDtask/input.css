@@ -1,0 +1,37 @@
+* {
+  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #646456;
+}
+
+#header {
+  border-bottom: 5px solid #BCBBBB;
+  margin: 10px 5px;
+  padding: 5px 0px;
+}
+
+h2 {
+  color: #BCBBBB;
+}
+
+#profile {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+#big {
+  width:1140px;
+  height:350px;
+}
+
+#app {
+  width: auto;
+  max-height: 10%;
+}
+
+p {
+  text-align: center;
+}
+
+.cntr {
+  text-align: center;
+}

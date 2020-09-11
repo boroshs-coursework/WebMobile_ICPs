@@ -1,0 +1,25 @@
+.results {
+  margin: 100px 0px 0px;
+}
+.results p { /* opponent and player text are 15px */
+  text-align: center;
+  font-size: 15px;
+}
+#winner { /* winner text is 25px */
+  font-size: 25px;
+}
+
+.game {
+  box-sizing: content-box;
+}
+
+.button {
+  height: auto;
+  max-width: 30%;
+  border-radius: 60%;
+  margin: 10px 5px;
+}
+
+.button:hover {
+  border: 5px solid black;
+}
