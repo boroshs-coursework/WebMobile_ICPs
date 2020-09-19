@@ -4,5 +4,5 @@ Summary - In this ICP, we learn how to use object-oriented JavaScript along with
 
 Wiki link - https://github.com/boroshs/WebMobile_ICPs/wiki/Web_ICP4
 
-Video link - https://youtu.be/
+Video link - https://youtu.be/juZXmWH3Gr8
 
