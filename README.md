@@ -10,4 +10,4 @@ ICP2 wiki - https://github.com/boroshs/WebMobile_ICPs/wiki/Web_ICP2
 
 ICP3 wiki - https://github.com/boroshs/WebMobile_ICPs/wiki/Web_ICP3
 
-ICP4 wiki - 
+ICP4 wiki - https://github.com/boroshs/WebMobile_ICPs/wiki/Web_ICP4
