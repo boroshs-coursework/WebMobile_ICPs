@@ -10,13 +10,11 @@ export class ClockComponent implements OnInit {
   months = 0; weeks = 0; days = 0;
   hours = 0; mins = 0; secs = 0;
   event = "Event"; eventDate = "Jan 1, 2025"; alert ="";
-  timer: any;
 
   constructor() {
     this.months = 0; this.weeks = 0; this.days = 0;
     this.hours = 0; this.mins = 0; this.secs = 0;
     this.event = ""; this.eventDate = ""; this.alert = "";
-    this.timer;
   }
 
   ngOnInit() {
@@ -26,8 +24,9 @@ export class ClockComponent implements OnInit {
     var toDateStr = `${inputMonth} ${inputDay}, ${inputYear}`;
     this.eventDate = toDateStr;
 
-    var toDate = new Date(toDateStr).getTime();
+    var toDate = new Date(toDateStr).getTime(); // date object for countdown time
 
+    // for calculations of time left
     var divMonth = 1000 * 60 * 60 * 24 * 7 * 4;
     var divWeek = 1000 * 60 * 60 * 24 * 7;
     var divDay = 1000 * 60 * 60 * 24;
@@ -35,14 +34,20 @@ export class ClockComponent implements OnInit {
     var divMin = 1000 * 60;
     var divSec = 1000;
 
-    this.timer = setInterval(() => { // updates timer for every second
+    for(var i=0; i<10000; i++) // clean up other setintervals sloppily per button click
+    {
+        window.clearInterval(i);
+    }
+
+    var timer = setInterval(() => { // updates timer for every second
       var fromDate = new Date().getTime();
       var millisecsBtwn = toDate - fromDate; // countdown in milliseconds
       
       if (millisecsBtwn <= 0) { // stop timer with clearInterval
-        clearInterval(this.timer);
+        clearInterval(timer); // clear up this specific interval you know is passed right away
         this.alert = `${this.event} HAS PASSED. Select event on a different date.`;
-        console.log(this);
+        this.months = 0; this.weeks = 0; this.days = 0;
+        this.hours = 0; this.mins = 0; this.secs = 0;
       }
       else {
         this.alert = "";
@@ -52,13 +57,10 @@ export class ClockComponent implements OnInit {
         this.hours = Math.floor((millisecsBtwn % divDay) / divHour);
         this.mins = Math.floor((millisecsBtwn % divHour) / divMin);
         this.secs = Math.floor((millisecsBtwn % divMin)/divSec);
-        console.log(this);
       }
-      console.log(this.timer);
+      console.log(timer);
+      console.log(this);
     }, 1000); // end 1 second interval
   } // end of countDownTo()
 
-  ngOnDestroy(){
-    clearInterval(this.timer);
-  }
 } // end of ClockComponent class
