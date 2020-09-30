@@ -1,12 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Calculator</title>
-  // 1. write Typescript code in "app.component.ts" to work with ToDo list
-</head>
 <body>
-// 2. write html(view) code to display the ToDos
+  <div class="container"> <!-- Container Starts -->
 
+    <div class="row">
+      <!-- Title -->
+      <div class="col-sm-12  d-flex justify-content-center">
+        <h1>TODO LIST</h1>
+      </div>
+
+      <div class="col-sm-12 d-flex justify-content-center">Describe Item: <!-- ToDo Input starts -->
+          <input #newItem type="text" placeholder="Birthday Planning">
+      </div>
+
+      <!-- Button -->
+      <div class="col-sm-12 d-flex justify-content-center">
+          <button id="add-item-btn" (click)="submitNewItem(newItem.value)">Add Item</button>
+      </div><!-- ToDo Input ends -->
+    </div>
+
+
+    <table id="todo-list" style="width:100%; margin-left: auto; margin-right:auto"> <!-- Display Items -->
+      <!-- One ToDo Item display starts -->
+      <tr *ngFor="let item of items; let i = index">
+          <td>
+            <!-- Complete Button --><button id="comp-item-btn" (click)="completeItem(item)" style="float:left">Complete!</button>
+          </td>
+          <td>{{item}}</td>
+          <td>
+            <!-- Delete Button --><button id="del-item-btn" (click)="deleteItem(item)">Delete</button>
+          </td>
+      </tr>
+    </table>
+
+  </div> <!-- End of Container -->
 </body>
-</html>
