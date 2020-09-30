@@ -1,31 +1,31 @@
 <div class="container">
 
     <div class="row">
-        <div class="col-md-2">{{months}} Months</div>
-        <div class="col-md-2">{{weeks}} Weeks</div>
-        <div class="col-md-2">{{days}} Days</div>
-        <div class="col-md-2">{{hours}} Hours</div>
-        <div class="col-md-2">{{mins}} Mins</div>
-        <div class="col-md-2">{{secs}} Secs</div>
+        <div class="col-md-2 d-flex justify-content-center">{{months}} Months</div>
+        <div class="col-md-2 d-flex justify-content-center">{{weeks}} Weeks</div>
+        <div class="col-md-2 d-flex justify-content-center">{{days}} Days</div>
+        <div class="col-md-2 d-flex justify-content-center">{{hours}} Hours</div>
+        <div class="col-md-2 d-flex justify-content-center">{{mins}} Mins</div>
+        <div class="col-md-2 d-flex justify-content-center">{{secs}} Secs</div>
     </div>
 
-    <div class="row"> Input CountDown-To Date
+    <div class="row">
         <!-- Date Input starts -->
 
-        <div class="col-md-3">Month: 
+        <div class="col-md-4 d-flex justify-content-center">Month: 
             <input #inputMonth type="text" class="input-date-col" id="input-month" placeholder="January">
         </div>
 
-        <div class="col-md-3">Day: 
+        <div class="col-md-4 d-flex justify-content-center">Day: 
             <input #inputDay type="text" class="input-date-col" id="input-day" placeholder="1">
         </div>
 
-        <div class="col-md-3">Year: 
+        <div class="col-md-4 d-flex justify-content-center">Year: 
             <input #inputYear type="text" class="input-date-col" id="input-year" placeholder="2025">
         </div>
 
         <!-- Button -->
-        <div class="col-md-3">
+        <div class="col-md-12 d-flex justify-content-center">
             <button id="countdown-button" (click)="countDownTo(inputMonth.value, inputDay.value, inputYear.value)">
             Countdown</button>
         </div>
