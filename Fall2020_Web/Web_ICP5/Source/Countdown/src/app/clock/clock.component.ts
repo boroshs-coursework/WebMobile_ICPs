@@ -11,11 +11,11 @@ export class ClockComponent implements OnInit {
   hours = 0; mins = 0; secs = 0;
   event = "Event"; eventDate = "Jan 1, 2025"; alert ="";
 
-  constructor() {
-    this.months = 0; this.weeks = 0; this.days = 0;
-    this.hours = 0; this.mins = 0; this.secs = 0;
-    this.event = ""; this.eventDate = ""; this.alert = "";
-  }
+  // constructor() {
+  //   this.months = 0; this.weeks = 0; this.days = 0;
+  //   this.hours = 0; this.mins = 0; this.secs = 0;
+  //   this.event = ""; this.eventDate = ""; this.alert = "";
+  // }
 
   ngOnInit() {
   }
