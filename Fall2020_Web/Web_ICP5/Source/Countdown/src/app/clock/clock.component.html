@@ -1,0 +1,35 @@
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-2">{{months}} Months</div>
+        <div class="col-md-2">{{weeks}} Weeks</div>
+        <div class="col-md-2">{{days}} Days</div>
+        <div class="col-md-2">{{hours}} Hours</div>
+        <div class="col-md-2">{{mins}} Mins</div>
+        <div class="col-md-2">{{secs}} Secs</div>
+    </div>
+
+    <div class="row"> Input CountDown-To Date
+        <!-- Date Input starts -->
+
+        <div class="col-md-3">Month: 
+            <input #inputMonth type="text" class="input-date-col" id="input-month" placeholder="January">
+        </div>
+
+        <div class="col-md-3">Day: 
+            <input #inputDay type="text" class="input-date-col" id="input-day" placeholder="1">
+        </div>
+
+        <div class="col-md-3">Year: 
+            <input #inputYear type="text" class="input-date-col" id="input-year" placeholder="2025">
+        </div>
+
+        <!-- Button -->
+        <div class="col-md-3">
+            <button id="countdown-button" (click)="countDownTo(inputMonth.value, inputDay.value, inputYear.value)">
+            Countdown</button>
+        </div>
+        
+        <!-- Date Input ends -->
+    </div>
+</div>
