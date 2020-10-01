@@ -4,5 +4,5 @@ Summary - In this lesson, we are going to discuss the importance of Angular and 
 
 Wiki link - https://github.com/boroshs/WebMobile_ICPs/wiki/Web_ICP5
 
-Video link - https://youtu.be/
+Video link - https://youtu.be/eWAiYZ5u0lk
 
