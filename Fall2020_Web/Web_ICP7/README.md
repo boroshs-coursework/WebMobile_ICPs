@@ -4,5 +4,5 @@ Summary - In this lesson, we are going to discuss MongoDB, Express.js, NodeJS, a
 
 Wiki link - https://github.com/boroshs/WebMobile_ICPs/wiki/Web_ICP7
 
-Video link - 
+Video link - https://youtu.be/uurfQUvvPMQ
 
