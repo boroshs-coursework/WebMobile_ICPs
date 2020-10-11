@@ -27,7 +27,22 @@ router.post('/', function (req, res, next) {
 });
 
 /* UPDATE BOOK */
+// like with GET, when an ID matches, you update record
+// use code from MongoDB, mLab projects
 
 /* DELETE BOOK */
+// like with GET, when ID matches, you delete record
+// use code from MongoDB, mLab projects
+router.delete('/:id', function (req, res, next) {
+  console.log('Trying to DELETE a book.');
+
+  Book.findByIdAndDelete(req.params.id, function (err, post) {
+    if (err){
+      //console.log(err.message);
+      return next(err);
+    }
+    res.json(post);
+  });
+});
 
 module.exports = router;

@@ -14,6 +14,8 @@ export class BookEditComponent implements OnInit {
   }
 
   ngOnInit() {
+    // when you click on edit button
+    // code to take input from user to edit info that saves into db
   }
 
 }
