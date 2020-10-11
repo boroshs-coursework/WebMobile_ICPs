@@ -27,8 +27,15 @@ router.post('/', function (req, res, next) {
 });
 
 /* UPDATE BOOK */
-// like with GET, when an ID matches, you update record
+// like with GET&SAVE, when an ID matches, you update record
 // use code from MongoDB, mLab projects
+// instead of $set from demo, using setValue in book-edit.component.ts
+router.put('/:id', function (req, res, next) {
+  Book.findByIdAndUpdate(req.params.id, req.body, function (err, post) {
+    if (err) return next(err);
+    res.json(post);
+  });
+});
 
 /* DELETE BOOK */
 // like with GET, when ID matches, you delete record
