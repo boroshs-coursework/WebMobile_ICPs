@@ -4,4 +4,4 @@ Summary - In this ICP, we learned how to create, build, run, and debug a program
 
 Wiki link - https://github.com/boroshs/WebMobile_ICPs/wiki/Mobile_ICP1
 
-Video link - 
+Video link - https://youtu.be/tNJtsBQgoLM
