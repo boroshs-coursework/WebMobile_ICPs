@@ -72,6 +72,31 @@
                 android:layout_height="48dp"
                 android:onClick="increment"
                 android:text="+" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="80dp"
+                android:layout_marginLeft="80dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:onClick="submitOrder"
+                android:text="Order" />
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:onClick="submitOrder"
+                android:text="Summary" />
         </LinearLayout>
     </LinearLayout>
 </ScrollView>
