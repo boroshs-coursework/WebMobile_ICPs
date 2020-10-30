@@ -17,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
     final int COFFEE_PRICE = 5;
     final int WHIPPED_CREAM_PRICE = 1;
     final int CHOCOLATE_PRICE = 2;
+    //final int WHIPPED_CREAM_PRICE = 1;
+    //final int CHOCOLATE_PRICE = 2;
     int quantity = 3;
 
     @Override
@@ -26,41 +28,49 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * This method is called when the order button is clicked.
+     * submitOrder is called when the Summary button is clicked.
      */
-
     public void submitOrder(View view) {
-
-        // get user input
-        EditText userInputNameView = (EditText) findViewById(R.id.user_input);
-        String userInputName = userInputNameView.getText().toString();
-
-        // check if whipped cream is selected
-        CheckBox whippedCream = (CheckBox) findViewById(R.id.whipped_cream_checked);
-        boolean hasWhippedCream = whippedCream.isChecked();
-
-        // check if chocolate is selected
-        CheckBox chocolate = (CheckBox) findViewById(R.id.chocolate_checked);
-        boolean hasChocolate = chocolate.isChecked();
-
-        // calculate and store the total price
-        float totalPrice = calculatePrice(hasWhippedCream, hasChocolate);
-
-        // create and store the order summary
-        String orderSummaryMessage = createOrderSummary(userInputName, hasWhippedCream, hasChocolate, totalPrice);
-
-        // Write the relevant code for making the buttons work(i.e implement the implicit and explicit intents
-
+        // Write the explicit intent here to go from main page to summary once summary button is clicked
+        // https://stackoverflow.com/questions/3591465/on-android-how-do-you-switch-activities-programmatically
+        // Also send data of the summary along with the intent
+        // https://stackoverflow.com/questions/2091465/how-do-i-pass-data-between-activities-in-android-application
+        Intent gotoSummary = new Intent(MainActivity.this, SummaryActivity.class);
+        gotoSummary.putExtra("ORDER_SUMMARY", getOrderSummaryMessage(view));
+        startActivity(gotoSummary);
     }
 
+    /**
+     * The method sendEmail is called when the Order button is clicked
+     */
+    // written using implicit intent
+    // https://www.javatpoint.com/how-to-send-email-in-android-using-intent
     public void sendEmail(String name, String output) {
-        // Write the relevant code for triggering email
+        //EditText userEmailView = (EditText) findViewById(R.id.user_input2);
+        //String userEmail = userEmailView.getText().toString();
+        /*String body = getOrderSummaryMessage(view);
 
-        // Hint to accomplish the task
+        Intent email = new Intent(Intent.ACTION_SEND);
+        email.setType("text/plain"); // otherwise error
+        email.putExtra(Intent.EXTRA_EMAIL, new String[]{"sbrc@umsystem.edu"});
+        email.putExtra(Intent.EXTRA_SUBJECT, "Pizza Order");
+        email.putExtra(Intent.EXTRA_TEXT, body);
+        startActivity(email);*/
 
-        /*Intent intent = new Intent(Intent.ACTION_VIEW);
-        if (intent.resolveActivity(getPackageManager()) !=null){
-            startActivity(intent);
+//        Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
+//                "mailto","abc@gmail.com", null));
+//        emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{"sbrc@umsystem.edu"}); // String[] addresses
+//        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Subject");
+//        emailIntent.putExtra(Intent.EXTRA_TEXT, "Body");
+//        startActivity(Intent.createChooser(emailIntent, "Send email..."));
+
+        /*if (email.resolveActivity(getPackageManager()) !=null){
+            startActivity(email);
+        } else {
+            Context context = getApplicationContext();
+            String msg = "Failed to open email client";
+            Toast toast = Toast.makeText(context, msg, Toast.LENGTH_SHORT);
+            toast.show();
         }*/
     }
 
@@ -72,6 +82,8 @@ public class MainActivity extends AppCompatActivity {
         String orderSummaryMessage = getString(R.string.order_summary_name, userInputName) + "\n" +
                 getString(R.string.order_summary_whipped_cream, boolToString(hasWhippedCream)) + "\n" +
                 getString(R.string.order_summary_chocolate, boolToString(hasChocolate)) + "\n" +
+                //getString(R.string.order_summary_chocolate, boolToString(hasChocolate)) + "\n" +
+                //getString(R.string.order_summary_chocolate, boolToString(hasChocolate)) + "\n" +
                 getString(R.string.order_summary_quantity, quantity) + "\n" +
                 getString(R.string.order_summary_total_price, price) + "\n" +
                 getString(R.string.thank_you);
@@ -91,7 +103,48 @@ public class MainActivity extends AppCompatActivity {
         if (hasChocolate) {
             basePrice += CHOCOLATE_PRICE;
         }
+        /*
+        if (hasChocolate) {
+            basePrice += CHOCOLATE_PRICE;
+        }
+        if (hasChocolate) {
+            basePrice += CHOCOLATE_PRICE;
+        }
+        */
         return quantity * basePrice;
+    }
+
+    /** Method to get the order summary message string **/
+    private String getOrderSummaryMessage(View view){
+        // get user input
+        EditText userInputNameView = (EditText) findViewById(R.id.user_input);
+        String userInputName = userInputNameView.getText().toString();
+
+        // check if whipped cream is selected
+        CheckBox whippedCream = (CheckBox) findViewById(R.id.whipped_cream_checked);
+        boolean hasWhippedCream = whippedCream.isChecked();
+
+        // check if chocolate is selected
+        CheckBox chocolate = (CheckBox) findViewById(R.id.chocolate_checked);
+        boolean hasChocolate = chocolate.isChecked();
+
+        /*
+        // check if whipped cream is selected
+        CheckBox whippedCream = (CheckBox) findViewById(R.id.whipped_cream_checked);
+        boolean hasWhippedCream = whippedCream.isChecked();
+
+        // check if chocolate is selected
+        CheckBox chocolate = (CheckBox) findViewById(R.id.chocolate_checked);
+        boolean hasChocolate = chocolate.isChecked();
+        */
+
+        // calculate and store the total price
+        float totalPrice = calculatePrice(hasWhippedCream, hasChocolate);
+
+        // create and store the order summary
+        String orderSummaryMessage = createOrderSummary(userInputName, hasWhippedCream, hasChocolate, totalPrice);
+
+        return orderSummaryMessage;
     }
 
     /**
@@ -107,7 +160,6 @@ public class MainActivity extends AppCompatActivity {
      *
      * @param view on passes the view that we are working with to the method
      */
-
     public void increment(View view) {
         if (quantity < 100) {
             quantity = quantity + 1;
