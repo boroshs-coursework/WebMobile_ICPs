@@ -11,6 +11,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.content.ActivityNotFoundException;
 
 public class MainActivity extends AppCompatActivity {
     private static final String MAIN_ACTIVITY_TAG = "MainActivity";
@@ -36,42 +37,34 @@ public class MainActivity extends AppCompatActivity {
         // Also send data of the summary along with the intent
         // https://stackoverflow.com/questions/2091465/how-do-i-pass-data-between-activities-in-android-application
         Intent gotoSummary = new Intent(MainActivity.this, SummaryActivity.class);
-        gotoSummary.putExtra("ORDER_SUMMARY", getOrderSummaryMessage(view));
+        String summary = getOrderSummaryMessage();
+        gotoSummary.putExtra("ORDER_SUMMARY", summary);
         startActivity(gotoSummary);
     }
 
     /**
      * The method sendEmail is called when the Order button is clicked
+     * written using implicit intent
      */
-    // written using implicit intent
-    // https://www.javatpoint.com/how-to-send-email-in-android-using-intent
-    public void sendEmail(String name, String output) {
-        //EditText userEmailView = (EditText) findViewById(R.id.user_input2);
-        //String userEmail = userEmailView.getText().toString();
-        /*String body = getOrderSummaryMessage(view);
+    public void sendEmail(View view) {
+        // https://medium.com/@cketti/android-sending-email-using-intents-3da63662c58f
+//        EditText userEmailView = (EditText) findViewById(R.id.user_input2);
+//        String userEmail = userEmailView.getText().toString();
+//        String email = "mailto:"+userEmail;
+//        String summary = getOrderSummaryMessage();
+        String mailto = "mailto:bob@example.org" +
+                "?cc=" + "sbrcb@umsystem.edu" +
+                "&subject=" + Uri.encode("Pizza Order") +
+                "&body=" + Uri.encode("bodyText");
 
-        Intent email = new Intent(Intent.ACTION_SEND);
-        email.setType("text/plain"); // otherwise error
-        email.putExtra(Intent.EXTRA_EMAIL, new String[]{"sbrc@umsystem.edu"});
-        email.putExtra(Intent.EXTRA_SUBJECT, "Pizza Order");
-        email.putExtra(Intent.EXTRA_TEXT, body);
-        startActivity(email);*/
+        Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
+        emailIntent.setData(Uri.parse(mailto));
 
-//        Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
-//                "mailto","abc@gmail.com", null));
-//        emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{"sbrc@umsystem.edu"}); // String[] addresses
-//        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Subject");
-//        emailIntent.putExtra(Intent.EXTRA_TEXT, "Body");
-//        startActivity(Intent.createChooser(emailIntent, "Send email..."));
-
-        /*if (email.resolveActivity(getPackageManager()) !=null){
-            startActivity(email);
-        } else {
-            Context context = getApplicationContext();
-            String msg = "Failed to open email client";
-            Toast toast = Toast.makeText(context, msg, Toast.LENGTH_SHORT);
-            toast.show();
-        }*/
+        try {
+            startActivity(emailIntent);
+        } catch (ActivityNotFoundException e) {
+            //TODO: Handle case where no email app is available
+        }
     }
 
     private String boolToString(boolean bool) {
@@ -115,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /** Method to get the order summary message string **/
-    private String getOrderSummaryMessage(View view){
+    private String getOrderSummaryMessage(){
         // get user input
         EditText userInputNameView = (EditText) findViewById(R.id.user_input);
         String userInputName = userInputNameView.getText().toString();

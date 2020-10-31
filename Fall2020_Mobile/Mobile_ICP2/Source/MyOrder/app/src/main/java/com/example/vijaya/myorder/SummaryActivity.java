@@ -3,6 +3,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
+import android.view.View;
 
 public class SummaryActivity extends AppCompatActivity {
     // create a text view in the activity that holds the summary from main java
@@ -21,7 +22,7 @@ public class SummaryActivity extends AppCompatActivity {
 
     // redirect to order page when go to order button is clicked
     // base code on submitOrder
-    public void goToOrder(){
+    public void goToOrder(View view){
         Intent gotoMain = new Intent(SummaryActivity.this, MainActivity.class);
         startActivity(gotoMain);
     }
