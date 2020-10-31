@@ -23,9 +23,9 @@
             android:layout_height="wrap_content"
             android:text="@string/name"
             android:textColor="@android:color/black"
-            app:fontFamily="casual"
+            android:textSize="20dp"
             android:textStyle="bold"
-            tools:textSize="28dp" />
+            app:fontFamily="casual" />
 
         <EditText
             android:id="@+id/user_input"
@@ -41,9 +41,9 @@
             android:layout_height="wrap_content"
             android:text="@string/email"
             android:textColor="@android:color/black"
-            app:fontFamily="casual"
+            android:textSize="20dp"
             android:textStyle="bold"
-            tools:textSize="28dp" />
+            app:fontFamily="casual" />
 
         <EditText
             android:id="@+id/user_input2"
@@ -111,7 +111,7 @@
             style="@style/HeaderTextStyle"
             android:text="@string/quantity"
             android:textColor="@android:color/holo_green_dark"
-            android:textSize="24dp"
+            android:textSize="24sp"
             app:fontFamily="casual"
             android:textStyle="bold"/>
 

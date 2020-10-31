@@ -9,7 +9,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
@@ -27,8 +27,8 @@
             style="@style/HeaderTextStyle"
             android:layout_width="match_parent"
             android:text="@string/summary"
-            tools:textSize="28dp"
-            android:layout_marginBottom="18dp"
+            android:textSize="28sp"
+            android:layout_marginBottom="24dp"
             android:textStyle="bold"
             app:fontFamily="casual"
             android:textColor="@android:color/black"/>
@@ -38,16 +38,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@android:color/black"
+            android:textSize="16sp"
             android:textStyle="bold"
-            app:fontFamily="casual"
-            tools:textSize="24dp" />
+            app:fontFamily="casual" />
+
 
         <Button
             android:layout_width="120dp"
             android:layout_height="65dp"
             android:layout_marginStart="130dp"
             android:layout_marginLeft="130dp"
-            android:layout_marginTop="270dp"
+            android:layout_marginTop="50dp"
             android:background="@color/colorPrimary"
             android:onClick="goToOrder"
             android:paddingTop="5dp"
@@ -55,7 +56,7 @@
             android:text="@string/goToOrder"
             android:textColor="@android:color/holo_orange_dark"
             android:textColorHighlight="@android:color/white"
-            android:textSize="18dp"
+            android:textSize="18sp"
             android:textStyle="bold"
             app:fontFamily="casual" />
 
@@ -66,7 +67,5 @@
             android:layout_marginTop="10dp"
             android:rotation="180"
             app:srcCompat="@drawable/top_slices" />
-
-
     </LinearLayout>
 </ScrollView>
