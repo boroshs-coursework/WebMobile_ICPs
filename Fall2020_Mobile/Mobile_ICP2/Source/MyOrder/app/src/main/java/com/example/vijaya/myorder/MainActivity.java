@@ -22,11 +22,13 @@ public class MainActivity extends AppCompatActivity {
     final float MUSHROOM_PRICE = 0.50f;
     final float OLIVE_PRICE = 0.50f;
     int quantity = 1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
+
     /**
      * submitOrder is called when the Summary button is clicked.
      * Write the explicit intent here to go from main page to summary once summary button is clicked
@@ -113,6 +115,7 @@ public class MainActivity extends AppCompatActivity {
 
         return quantity * basePrice;
     }
+
     /**
      * Method to get the order summary message string returned
      * **/
@@ -149,6 +152,7 @@ public class MainActivity extends AppCompatActivity {
 
         return orderSummaryMessage;
     }
+
     /**
      * This method displays the given quantity value on the screen.
      */
@@ -156,6 +160,7 @@ public class MainActivity extends AppCompatActivity {
         TextView quantityTextView = (TextView) findViewById(R.id.quantity_text_view);
         quantityTextView.setText("" + number);
     }
+
     /**
      * This method increments the quantity of pizza by one
      *
@@ -175,13 +180,14 @@ public class MainActivity extends AppCompatActivity {
             toast.show();
         }
     }
+
     /**
      * This method decrements the quantity of pizzas by one
      *
      * @param view passes on the view that we are working with to the method
      */
     public void decrement(View view) {
-        if (quantity > 2) {
+        if (quantity > 1) {
             quantity = quantity - 1;
             display(quantity);
         } else {

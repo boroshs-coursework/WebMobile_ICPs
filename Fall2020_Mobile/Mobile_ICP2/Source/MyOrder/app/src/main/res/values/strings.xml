@@ -3,7 +3,7 @@
     <string name="name">Name</string>
     <string name="email">E-mail</string>
 
-    <string name="toppings">Toppings (+ $3.00 Pizza)</string>
+    <string name="toppings">Toppings + $3.00 Pizza</string>
     <string name="pepperoni">$2.00 Pepperoni</string>
     <string name="sausage">$1.50 Sausage</string>
     <string name="mushroom">$0.50 Mushroom</string>
@@ -33,7 +33,7 @@
     <string name="order_summary_quantity">Quantity: <xliff:g example="2" id="quantity">%d</xliff:g></string>
     <string name="order_summary_total_price">Total: $<xliff:g example="10" id="price">%.2f</xliff:g></string>
 
-    <string name="too_much_pizza">Please select less than thirty pizzas</string>
+    <string name="too_much_pizza">Please select thirty or fewer pizzas</string>
     <string name="too_little_pizza">Please select at least one pizza</string>
 
     <string name="email_subject"><xliff:g example="Vijaya" id="name">%s</xliff:g>\'s Pizza Order</string>

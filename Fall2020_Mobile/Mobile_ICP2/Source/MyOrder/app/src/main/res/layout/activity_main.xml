@@ -1,7 +1,11 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/tomato_background"
+    android:backgroundTint="#80FFFFFF"
+    android:backgroundTintMode="src_over">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,103 +19,141 @@
 
         <TextView
             android:id="@+id/textView3"
-            style="@style/HeaderTextStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/name" />
+            android:text="@string/name"
+            android:textColor="@android:color/black"
+            app:fontFamily="casual"
+            android:textStyle="bold"
+            tools:textSize="28dp" />
 
         <EditText
             android:id="@+id/user_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16sp"
-            android:inputType="textCapWords" />
+            android:layout_marginBottom="18dp"
+            android:inputType="textCapWords"
+            app:fontFamily="casual"/>
 
         <TextView
             android:id="@+id/textView2"
-            style="@style/HeaderTextStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/email" />
+            android:text="@string/email"
+            android:textColor="@android:color/black"
+            app:fontFamily="casual"
+            android:textStyle="bold"
+            tools:textSize="28dp" />
 
         <EditText
             android:id="@+id/user_input2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16sp"
-            android:inputType="textCapWords" />
+            android:layout_marginBottom="18dp"
+            android:inputType="textCapWords"
+            app:fontFamily="casual"/>
 
         <TextView
             style="@style/HeaderTextStyle"
-            android:text="@string/toppings" />
+            android:layout_width="196dp"
+            android:layout_height="wrap_content"
+            android:text="@string/toppings"
+            android:textColor="@android:color/holo_green_dark"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            app:fontFamily="casual" />
 
         <CheckBox
             android:id="@+id/pepperoni_checked"
-            android:layout_width="wrap_content"
+            android:layout_width="197dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16sp"
             android:paddingLeft="24dp"
             android:text="@string/pepperoni"
-            android:textSize="16sp" />
+            android:textSize="18dp"
+            app:fontFamily="casual"
+            android:textStyle="bold"/>
 
         <CheckBox
             android:id="@+id/sausage_checked"
-            android:layout_width="wrap_content"
+            android:layout_width="197dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16sp"
             android:paddingLeft="24dp"
             android:text="@string/sausage"
-            android:textSize="16sp" />
+            android:textSize="18dp"
+            app:fontFamily="casual"
+            android:textStyle="bold"/>
 
         <CheckBox
             android:id="@+id/mushroom_checked"
-            android:layout_width="match_parent"
+            android:layout_width="196dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16sp"
             android:paddingLeft="24dp"
             android:text="@string/mushroom"
-            android:textSize="16sp" />
+            android:textSize="18dp"
+            app:fontFamily="casual"
+            android:textStyle="bold"/>
 
         <CheckBox
             android:id="@+id/olive_checked"
-            android:layout_width="match_parent"
+            android:layout_width="196dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16sp"
             android:paddingLeft="24dp"
             android:text="@string/olive"
-            android:textSize="16sp" />
+            android:textSize="18dp"
+            app:fontFamily="casual"
+            android:textStyle="bold"/>
 
         <TextView
             style="@style/HeaderTextStyle"
-            android:text="@string/quantity" />
+            android:text="@string/quantity"
+            android:textColor="@android:color/holo_green_dark"
+            android:textSize="24dp"
+            app:fontFamily="casual"
+            android:textStyle="bold"/>
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="151dp"
+            android:layout_height="72dp"
+            android:layout_marginBottom="10dp"
             android:orientation="horizontal">
 
             <Button
                 android:layout_width="48dp"
                 android:layout_height="48dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginRight="8dp"
+                android:background="@android:color/holo_green_dark"
                 android:onClick="decrement"
-                android:text="@string/minus" />
+                android:text="@string/minus"
+                android:textColor="@android:color/holo_orange_dark"
+                android:textColorHighlight="@android:color/white"
+                android:textSize="40dp" />
 
             <TextView
                 android:id="@+id/quantity_text_view"
-
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="8dp"
                 android:text="@string/initial_quantity_value"
-                android:textColor="#000000" />
+                android:textColor="@android:color/black"
+                android:textSize="30dp"
+                android:textStyle="bold" />
 
             <Button
                 android:layout_width="48dp"
                 android:layout_height="48dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@android:color/holo_green_dark"
                 android:onClick="increment"
-                android:text="@string/plus" />
-
+                android:text="@string/plus"
+                android:textColor="@android:color/holo_orange_dark"
+                android:textColorHighlight="@android:color/white"
+                android:textSize="30dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -124,18 +166,28 @@
                 android:layout_height="48dp"
                 android:layout_marginStart="80dp"
                 android:layout_marginLeft="80dp"
-                android:layout_marginTop="20dp"
                 android:layout_marginEnd="20dp"
                 android:layout_marginRight="20dp"
+                android:background="@color/colorPrimary"
                 android:onClick="sendEmail"
-                android:text="@string/order" />
+                android:text="@string/order"
+                android:textColor="@android:color/holo_orange_dark"
+                android:textColorHighlight="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                app:fontFamily="casual" />
 
             <Button
                 android:layout_width="100dp"
                 android:layout_height="48dp"
-                android:layout_marginTop="20dp"
+                android:background="@color/colorPrimary"
                 android:onClick="submitOrder"
-                android:text="@string/summary" />
+                android:text="@string/summary"
+                android:textColor="@android:color/holo_orange_dark"
+                android:textColorHighlight="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                app:fontFamily="casual" />
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

@@ -10,13 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity"
-            android:launchMode="singleTop"> <!--Retains values in previous activity, ues of back button-->
+            android:launchMode="singleTop"> <!--Retains values in previous activity when you use back button-->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!--Added this line to use intents to change activities-->
+        <!--Added this line to use intents with summary activity-->
         <activity android:name=".SummaryActivity" android:launchMode="singleTop"/>
     </application>
 
