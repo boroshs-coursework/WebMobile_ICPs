@@ -38,10 +38,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@android:color/black"
-            android:textSize="16sp"
+            android:textSize="20sp"
             android:textStyle="bold"
             app:fontFamily="casual" />
-
 
         <Button
             android:layout_width="120dp"
@@ -55,7 +54,6 @@
             android:paddingBottom="5dp"
             android:text="@string/goToOrder"
             android:textColor="@android:color/holo_orange_dark"
-            android:textColorHighlight="@android:color/white"
             android:textSize="18sp"
             android:textStyle="bold"
             app:fontFamily="casual" />

@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:text="@string/name"
             android:textColor="@android:color/black"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:textStyle="bold"
             app:fontFamily="casual" />
 
@@ -32,6 +32,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="18dp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
             android:inputType="textCapWords"
             app:fontFamily="casual"/>
 
@@ -41,7 +43,7 @@
             android:layout_height="wrap_content"
             android:text="@string/email"
             android:textColor="@android:color/black"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:textStyle="bold"
             app:fontFamily="casual" />
 
@@ -50,16 +52,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="18dp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
             android:inputType="textCapWords"
             app:fontFamily="casual"/>
 
         <TextView
             style="@style/HeaderTextStyle"
-            android:layout_width="196dp"
+            android:layout_width="141dp"
             android:layout_height="wrap_content"
             android:text="@string/toppings"
             android:textColor="@android:color/holo_green_dark"
-            android:textSize="24dp"
+            android:textSize="24sp"
             android:textStyle="bold"
             app:fontFamily="casual" />
 
@@ -70,7 +74,7 @@
             android:layout_marginBottom="16sp"
             android:paddingLeft="24dp"
             android:text="@string/pepperoni"
-            android:textSize="18dp"
+            android:textSize="18sp"
             app:fontFamily="casual"
             android:textStyle="bold"/>
 
@@ -81,7 +85,7 @@
             android:layout_marginBottom="16sp"
             android:paddingLeft="24dp"
             android:text="@string/sausage"
-            android:textSize="18dp"
+            android:textSize="18sp"
             app:fontFamily="casual"
             android:textStyle="bold"/>
 
@@ -92,7 +96,7 @@
             android:layout_marginBottom="16sp"
             android:paddingLeft="24dp"
             android:text="@string/mushroom"
-            android:textSize="18dp"
+            android:textSize="18sp"
             app:fontFamily="casual"
             android:textStyle="bold"/>
 
@@ -103,7 +107,7 @@
             android:layout_marginBottom="16sp"
             android:paddingLeft="24dp"
             android:text="@string/olive"
-            android:textSize="18dp"
+            android:textSize="18sp"
             app:fontFamily="casual"
             android:textStyle="bold"/>
 
@@ -130,8 +134,7 @@
                 android:onClick="decrement"
                 android:text="@string/minus"
                 android:textColor="@android:color/holo_orange_dark"
-                android:textColorHighlight="@android:color/white"
-                android:textSize="40dp" />
+                android:textSize="40sp" />
 
             <TextView
                 android:id="@+id/quantity_text_view"
@@ -140,7 +143,7 @@
                 android:layout_marginRight="8dp"
                 android:text="@string/initial_quantity_value"
                 android:textColor="@android:color/black"
-                android:textSize="30dp"
+                android:textSize="30sp"
                 android:textStyle="bold" />
 
             <Button
@@ -152,8 +155,7 @@
                 android:onClick="increment"
                 android:text="@string/plus"
                 android:textColor="@android:color/holo_orange_dark"
-                android:textColorHighlight="@android:color/white"
-                android:textSize="30dp" />
+                android:textSize="30sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -172,9 +174,8 @@
                 android:onClick="sendEmail"
                 android:text="@string/order"
                 android:textColor="@android:color/holo_orange_dark"
-                android:textColorHighlight="@android:color/white"
                 android:textStyle="bold"
-                android:textSize="18dp"
+                android:textSize="18sp"
                 app:fontFamily="casual" />
 
             <Button
@@ -184,9 +185,8 @@
                 android:onClick="submitOrder"
                 android:text="@string/summary"
                 android:textColor="@android:color/holo_orange_dark"
-                android:textColorHighlight="@android:color/white"
                 android:textStyle="bold"
-                android:textSize="18dp"
+                android:textSize="18sp"
                 app:fontFamily="casual" />
         </LinearLayout>
     </LinearLayout>
