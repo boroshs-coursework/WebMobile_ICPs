@@ -4,4 +4,4 @@ Summary - In this ICP, we learned some basics of Android by working on layouts, 
 
 Wiki link - https://github.com/boroshs/WebMobile_ICPs/wiki/Mobile_ICP2
 
-Video link - 
+Video link - https://youtu.be/8KufMmaE0bE
