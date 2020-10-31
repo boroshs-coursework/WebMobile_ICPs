@@ -6,22 +6,28 @@ import android.widget.TextView;
 import android.view.View;
 
 public class SummaryActivity extends AppCompatActivity {
-    // create a text view in the activity that holds the summary from main java
-    // base code is copied from main activity
+    /*
+    * Create a text view in the summary activity that holds the summary String from main activity.
+    * Use intent to get the data that was passed via intent when changing activity from
+    * main-> summary in submitOrder.
+    * */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        // the following two lines just similar to main activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_summary);
 
-        //display the summary data in a text view
+        // display the summary data passed via intent in a text view
         Intent summDataIntent = getIntent();
         String summData = summDataIntent.getStringExtra("ORDER_SUMMARY");
+        
         TextView summDataView = (TextView) findViewById(R.id.orderSummary);
         summDataView.setText(summData);
     }
 
-    // redirect to order page when go to order button is clicked
-    // base code on submitOrder
+    /*
+     * Redirect to order page when 'go to order button' is clicked
+     * */
     public void goToOrder(View view){
         Intent gotoMain = new Intent(SummaryActivity.this, MainActivity.class);
         startActivity(gotoMain);

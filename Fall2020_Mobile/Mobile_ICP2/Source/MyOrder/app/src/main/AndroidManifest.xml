@@ -9,13 +9,15 @@
         android:roundIcon="@mipmap/pizza_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:launchMode="singleTop"> <!--Retains values in previous activity, ues of back button-->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SummaryActivity" />
+        <!--Added this line to use intents to change activities-->
+        <activity android:name=".SummaryActivity" android:launchMode="singleTop"/>
     </application>
 
 </manifest>
