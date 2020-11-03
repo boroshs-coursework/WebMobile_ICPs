@@ -1,7 +1,7 @@
-# Mobile_Lesson2: Developing food ordering applications for Android
+Mobile_Lesson3: Developing earthquake information application for Android
 
-Summary - In this ICP, we learned some basics of Android by working on layouts, views, and intents, thereby getting familiarized with the management system to make a pizza ordering app. Some elements of the Java language are also revisited through ICP.
+Summary - This lesson helps understand some important aspects of Android, such as fetching JSON data from APIs, parsing the JSON data, handling errors, using the Async Task Class, and some Java elements along with usage of ListView.
 
-Wiki link - https://github.com/boroshs/WebMobile_ICPs/wiki/Mobile_ICP2
+Wiki link - https://github.com/boroshs/WebMobile_ICPs/wiki/Mobile_ICP3
 
-Video link - https://youtu.be/8KufMmaE0bE
+Video link - https://youtu.be/
