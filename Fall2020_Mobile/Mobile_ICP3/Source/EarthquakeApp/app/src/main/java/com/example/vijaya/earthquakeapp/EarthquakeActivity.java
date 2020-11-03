@@ -1,12 +1,17 @@
 package com.example.vijaya.earthquakeapp;
 
+import android.content.Context;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.content.Intent;
+import android.content.ActivityNotFoundException;
+import android.widget.Toast;
 
 import com.example.vijaya.earthquakeapp.R;
 
@@ -55,7 +60,18 @@ public class EarthquakeActivity extends AppCompatActivity {
                 Uri earthquakeUri = Uri.parse(currentEarthquake.getUrl());
 
                 //TODO: 4. Create a new intent to view the earthquake URI.Send the intent to launch a new activity
+                Intent viewUriIntent = new Intent(Intent.ACTION_VIEW, earthquakeUri);
+                try {
+                    startActivity(viewUriIntent);
+                } catch (ActivityNotFoundException e) {
+                    Context context = getApplicationContext();
+                    String noUri = "Unable to view the earthquake URI";
+                    Log.i("EarthquakeActivity", noUri);
 
+                    int duration = Toast.LENGTH_SHORT;
+                    Toast toast = Toast.makeText(context, noUri, duration);
+                    toast.show();
+                }
             }
         });
 
