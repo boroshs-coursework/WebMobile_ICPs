@@ -4,4 +4,4 @@ Summary - This lesson helps understand some important aspects of Android, such a
 
 Wiki link - https://github.com/boroshs/WebMobile_ICPs/wiki/Mobile_ICP3
 
-Video link - https://youtu.be/
+Video link - https://youtu.be/25HT5DJxj0Y
