@@ -1,7 +1,7 @@
-# Mobile_Lesson2: Developing food ordering applications for Android
+# Mobile_Lesson4: Accessing the hardware components of the Android system
 
-Summary - In this ICP, we learned some basics of Android by working on layouts, views, and intents, thereby getting familiarized with the management system to make a pizza ordering app. Some elements of the Java language are also revisited through ICP.
+In this lesson, we will learn how to access the Android system's different components, such as the camera, location, and sensors. These can be incorporated into any apps to add more features and apps built entirely on these components.
 
-Wiki link - https://github.com/boroshs/WebMobile_ICPs/wiki/Mobile_ICP2
+Wiki link - https://github.com/boroshs/WebMobile_ICPs/wiki/Mobile_ICP4
 
-Video link - https://youtu.be/8KufMmaE0bE
+Video link - 
